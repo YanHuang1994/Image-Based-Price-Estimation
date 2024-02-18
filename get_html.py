@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time
+import os
 
 # Initialize WebDriver
 service = Service(ChromeDriverManager().install())
@@ -16,15 +17,19 @@ base_urls = {
     'acoustic_guitars': 'https://reverb.com/marketplace?query=guitar&condition=used&country_of_origin=US&product_type=acoustic-guitars&category=dreadnought&page='
 }
 
-# Define file path for saving HTML content
-file_path_prefix = 'C:\\Users\\DELL\\Desktop\\code\\Deeplearning\\Image-Based-Price-Estimation\\'
+# Create subdirectories for HTML files if they don't exist
+directories = ['./electric_guitars_html/', './acoustic_guitars_html/']
+for directory in directories:
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 
 for guitar_type, base_url in base_urls.items():
+    dir_path = f"./{guitar_type}_html/"  # Determine the directory path based on guitar type
     for page in range(1, 41):  # Looping through pages 1 to 41
         url = f"{base_url}{page}"
         driver.get(url)
 
-        time.sleep(10)  # wait 10 second
+        time.sleep(10)  # wait 10 seconds
 
         # Retrieve and format the page HTML
         html = driver.page_source
@@ -32,7 +37,7 @@ for guitar_type, base_url in base_urls.items():
         formatted_html = soup.prettify()
 
         # Construct the file name and path
-        filepath = f'{file_path_prefix}{guitar_type}_page_{page}.html'
+        filepath = os.path.join(dir_path, f'{guitar_type}_page_{page}.html')
         with open(filepath, 'w', encoding='utf-8') as file:
             file.write(formatted_html)
 
