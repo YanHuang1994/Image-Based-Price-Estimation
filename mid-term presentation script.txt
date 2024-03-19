@@ -1,0 +1,39 @@
+Slide1: Ok, Let's get started.
+	Our project is to develop an Image Based Price Estimation Model.
+
+Slide2: These are our members.
+
+Slide3:
+	So far, we have completed the part of 
+	Methodology Research, Data Collection, Data Processing, and Benchmark Baseline Model development as planned.
+
+Slide4:
+	We reviewed 3 papers and gained some insights.
+	From the first article, we learned about the importance of a hybrid CNN-LSTM model for price interval predictions.
+	From the second one, we understood the high efficiency of CNN for image-based price prediction.
+	Based on the viewpoint from the last article, we decided to concentrate on the Acoustic Guitar as our study focus.
+
+Slide5:
+	Then, we collected data by scraping guitar websites.
+
+	We selected Guitar Center as our data source because it offers a comprehensive collection of second-hand guitar images at reasonable prices, 	focusing more on everyday items than luxury products.
+
+Slide6:
+we first downloaded the webpages and then scraped guitar images.
+
+Slide7:
+	Next, we process the data by four steps
+	Remove the background
+	Eliminate invalid images
+	Crop the images to keep the top soundboard and
+	Resize and pad the guitar images
+
+Slide8:
+	After processing, we have guitar images of the uniform size for model training
+
+Slide9:
+	Finally, we created two models
+	One is Two-layer fully connected neural network, acting as a toy model to verify preprocessing steps and dataset splits.
+	Another is ResNet-50, as recommended by the slides in class, used to set a performance threshold for future improvements.
+Slide10:
+	That's our work so far, thank you!
