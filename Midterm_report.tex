@@ -1,0 +1,79 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Image-Based Price Estimation of Second-Hand Musical Instruments using Deep Learning
+}
+
+\author{\IEEEauthorblockN{\textsuperscript{} Yan Huang}
+\IEEEauthorblockA{\textit{M.S Data Science, Lehigh University} \\
+Bethlehem City, USA \\
+yah423@lehigh.edu}
+\and
+\IEEEauthorblockN{\textsuperscript{} Vyshnavi Kondapalli}
+\IEEEauthorblockA{\textit{M.S Data Science, Lehigh University} \\
+Bethlehem City, USA \\
+vyk223@lehigh.edu}
+\and
+\IEEEauthorblockN{\textsuperscript{} Xiang Gao}
+\IEEEauthorblockA{\textit{M.S Data Science, Lehigh University} \\
+Bethlehem City, USA \\
+xig423@lehigh.edu}
+\and
+\IEEEauthorblockN{\textsuperscript{} Lauri Soome}
+\IEEEauthorblockA{\textit{M.S Data Science, Lehigh University} \\
+Bethlehem City, USA \\
+las623@lehigh.edu}
+\and
+\IEEEauthorblockN{\textsuperscript{} Parv Venkitasubramaniam(Sponsor)}
+\IEEEauthorblockA{\textit{Dept of ECE , Lehigh University} \\
+Bethlehem City, USA \\
+pav309@lehigh.edu}
+
+}
+
+\maketitle
+
+\begin{abstract}
+In the realm of e-commerce, the accuracy of price estimation models greatly benefits from advancements in image-based analysis. This study presents the "Image-Based Price Estimation Model," a novel approach aimed at predicting product prices through visual data, with a specific focus on acoustic guitars. Utilizing a dataset collected from Guitar Center, encompassing a wide range of second-hand guitar images, this project explores the feasibility of employing Convolutional Neural Networks (CNN) for image-based price prediction. Our methodology integrates insights from a review of three significant research papers, highlighting the advantages of hybrid CNN-LSTM models and the effectiveness of CNNs in capturing price-relevant visual features. The data underwent extensive processing, including background removal, image cropping, and normalization, to ensure consistency across the dataset. We developed two models for our investigation: a basic two-layer fully connected neural network to test preprocessing steps and dataset splits, and a more sophisticated ResNet-50 model to establish a performance benchmark. Our preliminary findings underscore the potential of deep learning techniques in enhancing the precision of price estimation based on image data, opening new avenues for research and application in e-commerce analytics. This abstract encapsulates our work on the "Image-Based Price Estimation Model," underscoring our progress in methodology research, data collection and processing, and the development of benchmark models.
+
+\end{abstract}
+
+\section{Introduction}
+(1).	Project Rationale: In today's digital marketplace, the valuation of second-hand goods remains a pivotal challenge. The "Image-Based Price Estimation Model" project aims to introduce a novel approach to estimating prices for second-hand acoustic guitars. By leveraging advanced image analysis and deep learning, this project seeks to bring transparency and fairness to the second-hand market, enhancing buyer and seller experiences.
+
+(2).	Objectives: The primary objective of this project is to develop a model capable of recommending fair prices for second-hand guitars based on their images. This initiative not only utilizes the potential of visual data but also promotes equitable practices in the second-hand marketplace.
+
+(3).	Foundation Work: The project embarked on its journey with comprehensive methodology research, data collection, and processing. The initial phase included developing a benchmark baseline model to validate our approaches and set a foundation for more advanced predictive modeling.
+
+(4).	Literature Review Insights: An extensive review of existing literature, including three pivotal studies, provided valuable insights into the effectiveness of hybrid CNN-LSTM models and the indispensable role of CNNs in visual price prediction. These findings guided our focus toward acoustic guitars, considering their significant visual influence on price determination.
+
+(5).	Data Collection Strategy: Our data collection process involved scraping the Guitar Center website, a renowned source of a wide array of second-hand guitar images. This choice allowed us to gather a diverse dataset, emphasizing everyday items over luxury products to ensure broad market relevance.
+
+(6).	Preprocessing Steps: The data underwent a meticulous preprocessing regimen, including background removal, invalid image elimination, strategic cropping to emphasize the guitar's soundboard, and uniform resizing. These steps ensured the data's consistency and preparedness for modeling.
+
+(7).	Model Development Approach: The project explored two distinct models: a simple two-layer fully connected neural network as a preliminary step to test data preprocessing efficacy and dataset splits, and a more sophisticated ResNet-50 model aimed at setting a high benchmark for model performance and future improvements.
+
+(8).	This introduction encapsulates the strategic and structured approach undertaken to address the challenge of price estimation for second-hand acoustic guitars through image analysis. By combining rigorous research, innovative data processing techniques, and advanced modeling, the project sets the stage for a significant contribution to the digital marketplace, aiming to enhance the fairness and transparency of second-hand guitar pricing.
+
+
+\begin{thebibliography}{00}
+
+\bibitem{b1} Fathalla, A., Salah, A., Li, K., Li, K., \& Francesco, P. (2020, July). Deep end-to-end learning for price prediction of second-hand items. \textit{Knowledge and Information Systems}, 62(4541-4568).
+
+\bibitem{b2} Yang, R. R., Chen, S., \& Chou, E. (2018, October). Vehicle Price Prediction using Visual Features. \textit{arXiv preprint arXiv:1803.11227v2 [cs.CV]}.
+
+\bibitem{b3} Zhou, X., Miyauchi, R., \& Inoue, Y. (2022). Effect of wood attributes on the price persistence of acoustic guitars. \textit{Journal of Wood Science}, 68(49).
+
+\end{thebibliography}
+
+\end{document}
