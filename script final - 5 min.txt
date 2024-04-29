@@ -1,0 +1,75 @@
+Slide 1:
+Hello, everyone.
+We're excited to be here for the final presentation.
+
+Slide 2:
+we are a team with four members, Yan, Vyshnavi, Xiang, and Lauri, 
+under the supervision of Professor Parv.
+
+Slide 3:
+Now, Let's get started with the context of our project.
+
+Making music is a popular activity for children, but about 50% discontinue their musical activities by age 17.
+
+At the same time, many others start their musical journey with used instruments because it's cost-effective and sufficient for learning basic musical skills. 
+
+However, the complex pricing of musical instruments, influenced by factors like brand and condition, poses challenges for beginners.
+
+This situation highlights a potential market among those discontinuing and those beginning their musical journey.
+
+Slide 4:
+This also raises a question - How can we assist both beginners and sellers in determining a fair price for used musical instruments?
+
+Slide 5:
+To address this question, we started our project.
+
+Due to time constraints, 
+our goal is to estimate the price of only one instrument, acoustic guitar,
+using deep learning techniques.
+
+Our dataset include two parts, the image and other relevant details, like condition, brand, and price.
+ 
+All of them are scraped from the Guitar Center's shopping website.
+
+Slide 6:
+Before model training process, we divided the price into eight ranges. 
+this can transform the task from regression to classification, which is more suitable for deep learning models.
+
+Then, we designed a four-layer fully connected network to train our model on tabular data.
+
+Next, we utilized four classic architectures to train our models on image data, including, ResNet, SqueezeNet, DenseNet, and VGG16.
+
+Finally, we combined two kinds of model to create ensemble models for price range prediction.
+
+Slide 7:
+This is the architecture of our models. 
+
+For the tabular data model, we have four fully connected layers with activation functions and dropout regularization.
+
+For the image models, we typically followed the main structure and added two fully connected layers to align with our target classification tasks.
+
+The only exception is SqueezeNet; we modified its convolutional layer to output eight nodes for the classification task, since it uses average pooling instead of a fully connected layer at the end.
+
+Slide 8:
+For the ensemble model, we concatenate features from the pre-trained image models and the tabular data model, followed by a fully connected layer for classification task.
+
+Slide 9:
+Finally, We achieved a model with 44% of accuracy, which is better than our benchmark - the tabular data model. But the results are not as promising as we had hoped.
+
+In our lectures, we learned that model ensemble could enjoy 2% extra performance. Unfortunately, our ensemble models didn't show significant improvements.
+
+Slide 10:
+In the end, let's recap the challenges we have faced.
+
+Initially, we collected images of various guitar parts, but not all of them were relevant or informative for price prediction. 
+
+Given our limited expertise in musical instruments, we consulted a music instructor Lauren. She helped us define the model's scope, only focusing on the guitar's soundboard, as it is the key factor affecting the price.
+
+Meanwhile, our images included messy backgrounds and extraneous parts, prompting us to develop another heuristic algorithm to isolate the soundboard from the images.
+
+Additionally, our guitar images were taken from different angles, perspectives, and light intensities. This required us to apply various data augmentation techniques to manage these variations.
+
+Finally, the accuracy of our model is not very high. In the future, we need to incorporate additional types of data, such as audio, to enhance the price prediction.
+
+Slide 11:
+That concludes our presentation, Thank you.
